@@ -7,14 +7,14 @@
 
 .layout-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   height: 100%;
   width: 100%;
 }
 
 .layout-content {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   height: 100%;
   width: 100%;
 }
@@ -25,7 +25,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   background-color: var(--bg-secondary);
-  height: 100vh;
+  height: 100%;
   width: 100%;
 }
 
