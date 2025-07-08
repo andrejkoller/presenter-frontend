@@ -3,8 +3,8 @@
   flex-direction: column;
   background-color: var(--bg-menu);
   padding: 0 20px;
-  height: 96px;
-  min-height: 96px;
+  height: 76px;
+  min-height: 76px;
   transition: min-height 0.3s;
 }
 
@@ -122,8 +122,8 @@ button.profile-button {
   justify-content: center;
   background-color: var(--color-primary);
   border-radius: 50%;
-  width: 56px;
-  height: 56px;
+  width: 48px;
+  height: 48px;
   transition: 0.2s cubic-bezier(0, 0.5, 0.5, 1);
   border: 0.225rem solid var(--text-default);
 }
@@ -133,7 +133,7 @@ button.profile-button {
 }
 
 .profile-logo {
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   color: #ffffff;
   margin: 0;
 }
