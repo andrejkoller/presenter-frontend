@@ -1,11 +1,12 @@
 .header {
   display: flex;
   flex-direction: column;
-  background-color: var(--bg-menu);
+  background-color: var(--bg-secondary);
   padding: 0 20px;
-  height: 76px;
-  min-height: 76px;
+  height: 64px;
+  min-height: 64px;
   transition: min-height 0.3s;
+  border-bottom: 1px solid var(--border-default);
 }
 
 .header-container {
@@ -27,36 +28,52 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 16px;
   height: 100%;
 }
 
-.menu-toggle {
+.nav-section {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
-  width: 100%;
+  justify-content: center;
 }
 
-button.menu-button {
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 32px;
-  width: 32px;
-  padding: 6px;
-  border-radius: 10px;
+  border-radius: 50%;
   background-color: transparent;
-  border: none;
   cursor: pointer;
 }
 
-.menu-icon {
-  width: 20px;
-  height: 20px;
+.nav-item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
   color: var(--text-default);
+  padding: 8px;
 }
 
-.menu-button:hover {
+.nav-item a span {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.nav-item:hover {
   background-color: var(--link-hover-bg);
 }
 
@@ -65,43 +82,13 @@ button.menu-button {
   align-items: center;
   justify-content: center;
   height: 100%;
-  gap: 16px;
-}
-
-.presentation-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-button.presentation-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-  border-radius: 50%;
-  background-color: var(--bg-main);
-  height: 40px;
-  width: 40px;
-}
-
-.presentation-icon {
-  width: 20px;
-  height: 20px;
-  color: var(--text-default);
-}
-
-button.presentation-button:hover {
-  background-color: var(--link-hover-bg);
+  gap: 32px;
 }
 
 .profile-section {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
 }
 
 button.profile-button {
@@ -120,41 +107,88 @@ button.profile-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-primary);
-  border-radius: 50%;
   width: 48px;
   height: 48px;
-  transition: 0.2s cubic-bezier(0, 0.5, 0.5, 1);
-  border: 0.225rem solid var(--text-default);
-}
-
-.profile:hover {
-  transform: scale(1.05);
+  background-color: var(--color-primary);
+  border-radius: 50%;
 }
 
 .profile-logo {
-  font-size: 1.125rem;
+  font-size: 18px;
   color: #ffffff;
   margin: 0;
 }
 
-.menu-item {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  padding: 12px 8px 12px 12px !important;
-  color: var(--text-default);
-  font-size: 14px !important;
-  font-family: var(--font-inter) !important;
-  border-radius: 4px !important;
-  background-color: var(--bg-main) !important;
-  width: 100% !important;
+.profile-menu {
+  position: absolute;
+  right: 20px !important;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
-.menu-item:hover {
+.profile-menu-item {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 4px 8px 4px 12px;
+  box-sizing: border-box;
+  border-radius: 10px !important;
+  font-size: 16px !important;
+}
+
+.profile-menu-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--text-default);
+  margin-right: 8px;
+}
+
+.profile-menu-text {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-default);
+}
+
+.profile-menu-item:hover {
   background-color: var(--link-hover-bg) !important;
 }
 
-.menu-item:last-child {
-  border-top: 1px solid var(--border-default);
+.profile-menu-item:last-child:hover {
+  background-color: var(--alert-error-bg) !important;
+}
+
+.profile-menu-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  margin: 12px 0;
+  width: 100%;
+}
+
+.profile-menu-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.profile-menu-logo {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.profile-menu-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-default);
+}
+
+.profile-menu-divider {
+  border-color: var(--border-default) !important;
 }
